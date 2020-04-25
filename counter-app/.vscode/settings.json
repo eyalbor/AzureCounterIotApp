@@ -1,0 +1,7 @@
+{
+    "appService.deploySubpath": "dist\\counter-app",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ]
+}
