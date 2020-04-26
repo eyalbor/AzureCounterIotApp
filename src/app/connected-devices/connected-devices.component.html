@@ -1,0 +1,19 @@
+<h2>My Devices</h2>
+<ul class="devices">
+  <li *ngFor="let device of devices"
+    [class.selected]="device === selectedDevice">
+    <span class="badge">{{device.id}}</span> {{device.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedDevice">
+
+  <h2>{{selectedDevice.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedDevice.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedDevice.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
