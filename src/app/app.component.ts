@@ -19,7 +19,8 @@ interface Counter {
   styleUrls: ["./app.component.less"]
 })
 export class AppComponent {
-  private readonly serverHost = "https://counterfunctions20200421143710.azurewebsites.net/api/";
+  //private readonly serverHost = "https://counterfunctions20200421143710.azurewebsites.net/api/";
+  private readonly serverHost = " http://localhost:7071/api/";
   private readonly httpOptions = { headers: new HttpHeaders({ "Content-Type": "application/json" }) };
   private readonly negotiateUrl = this.serverHost + "negotiate";
   private readonly getCounterUrl = this.serverHost + "get-counter";
