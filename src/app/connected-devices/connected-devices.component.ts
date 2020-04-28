@@ -14,14 +14,6 @@ export class ConnectedDevicesComponent implements OnInit {
   //private readonly serverHost = " http://localhost:7071/api/";
   private iotDevices: Device[] = [];
   public devices = [];
-      // {
-    //   id: 0,
-    //   name: "eee"
-    // },
-    // {
-    //   id: 1,
-    //   name: "aaa"
-    // }
 
   constructor(private readonly http: HttpClient) {
     this.http.get<Device[]>(this.serverHost +"get-devices").subscribe(devicesStr => {
@@ -39,8 +31,10 @@ export class ConnectedDevicesComponent implements OnInit {
     
   }
 
-  plus() {
-    console.log("plus")
+  plus(event, item) {
+    console.log(item)
+    this.http.post(this.serverHost +"send-message-from-cloud-to-device/" + item, null).toPromise()
+    .catch(e => console.log(e));
   }
 
 }

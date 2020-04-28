@@ -3,7 +3,7 @@
   <li *ngFor="let device of devices"
     [class.selected]="device === selectedDevice">
     <span class="badge">{{device.id}}</span> {{device.name}}
-    <button (click)="plus()">+</button>
+    <button (click)="plus($event, device.name)">+</button>
   </li>
 </ul>
 
