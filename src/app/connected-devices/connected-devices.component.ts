@@ -10,8 +10,8 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   styleUrls: ['./connected-devices.component.less']
 })
 export class ConnectedDevicesComponent implements OnInit {
-  //private readonly serverHost = "https://counterfunctions20200421143710.azurewebsites.net/api/";
-  private readonly serverHost = " http://localhost:7071/api/";
+  private readonly serverHost = "https://counterfunctions20200421143710.azurewebsites.net/api/";
+  //private readonly serverHost = " http://localhost:7071/api/";
   private iotDevices: Device[] = [];
   public devices = [];
       // {
